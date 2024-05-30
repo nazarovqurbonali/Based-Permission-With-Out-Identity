@@ -20,4 +20,6 @@ public static class Permissions
         public const string Edit = "Permissions.Products.Edit";
         public const string Delete = "Permissions.Products.Delete";
     }
+    
+
 }
