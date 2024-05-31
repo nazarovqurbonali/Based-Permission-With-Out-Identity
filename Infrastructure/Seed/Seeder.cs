@@ -199,7 +199,7 @@ public class Seeder(DataContext context, IHashService hashService)
             var existingClaims = await context.RoleClaims.Where(x => x.RoleId == superAdminRole.Id).ToListAsync();
             foreach (var claim in roleClaims)
             {
-                if (existingClaims.Any(c => c.ClaimType == claim.Value) == false)
+                if (existingClaims.Any(c => c.ClaimValue == claim.Value) == false)
                     await context.AddPermissionClaim(superAdminRole, claim.Value);
             }
         }
